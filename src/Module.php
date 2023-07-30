@@ -10,7 +10,7 @@ class Module implements ModuleInterface
 {
     public function __construct()
     {
-        $_SERVER['REQUEST_ID'] = $this->getUUID();
+        $_SERVER['PINA_REQUEST_ID'] = $this->getUUID();
         register_shutdown_function(
             function () {
                 global $argv;

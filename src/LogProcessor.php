@@ -25,7 +25,7 @@ class LogProcessor
      */
     public function __invoke(array $record): array
     {
-        $record['extra']['user_id'] = $_SERVER['USER_ID'];
+        $record['extra']['user_id'] = $_SERVER['PINA_USER_ID'] ?? 0;
         if (isset($_SERVER["REQUEST_METHOD"])) {
             $record['extra']['method'] = Input::getMethod();
             $record['extra']['resource'] = Input::getResource();
@@ -33,7 +33,7 @@ class LogProcessor
             $record['extra']['controller'] = $controller;
             $record['extra']['action'] = $action;
         }
-        $record['extra']['request_id'] = $_SERVER["REQUEST_ID"] ?? '';
+        $record['extra']['request_id'] = $_SERVER["PINA_REQUEST_ID"] ?? '';
 
         if (defined('PINA_STARTED')) {
             $record['extra']['time'] = round(array_sum(explode(' ', microtime())) - PINA_STARTED, 4);
