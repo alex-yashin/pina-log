@@ -1,0 +1,26 @@
+{
+  "name": "alex-yashin/pina-log",
+  "keywords": ["php"],
+  "license": "MIT",
+  "homepage": "https://github.com/alex-yashin/pina-log/",
+  "support": {
+    "issues": "https://github.com/alex-yashin/pina-log/issues",
+    "source": "https://github.com/alex-yashin/pina-log/"
+  },
+  "authors": [
+    {
+      "name": "Alex Yashin",
+      "email": "alex-yashin@ya.ru"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "pinahq/framework": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PinaLog\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
