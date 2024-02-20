@@ -18,7 +18,9 @@ class LogEndpoint extends Endpoint
             header("Content-type: text/csv");
             readfile($path);
         } else {
-            echo '<pre>' . file_get_contents($path) . '</pre>';
+            echo '<pre>';
+            readfile($path);
+            echo '</pre>';
         }
         exit;
     }
