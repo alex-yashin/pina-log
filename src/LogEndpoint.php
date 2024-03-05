@@ -15,8 +15,8 @@ class LogEndpoint extends Endpoint
             exit;
         }
 
-        $n = intval($this->query()->get('n'));
-        $suffix = $n > 0 ? ('.' . $n) : '';
+        $page = intval($this->query()->get('page'));
+        $suffix = $page > 0 ? ('.' . $page) : '';
 
         $gzipped = false;
         $path = App::path() . "/../var/log/" . $id . ".csv" . $suffix;
