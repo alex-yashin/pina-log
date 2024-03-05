@@ -15,7 +15,8 @@
   ],
   "require": {
     "php": ">=7.2",
-    "pinahq/framework": "*"
+    "pinahq/framework": "*",
+    "ext-zlib": "*"
   },
   "autoload": {
     "psr-4": {
